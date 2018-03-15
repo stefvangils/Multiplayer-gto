@@ -117,6 +117,38 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1303533174231540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4550626958893556}
+  - component: {fileID: 114315819332373012}
+  m_Layer: 0
+  m_Name: SpearmanFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1340516276819138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4077043367487152}
+  - component: {fileID: 114450833138460564}
+  m_Layer: 0
+  m_Name: CubeFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1456210012458644
 GameObject:
   m_ObjectHideFlags: 1
@@ -273,6 +305,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4077043367487152
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1340516276819138}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -160, y: -331, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224565054254933526}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4550626958893556
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1303533174231540}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -160, y: -331, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224565054254933526}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114028001007819278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -367,11 +425,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: 
+        m_MethodName: NextTurn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -522,6 +580,26 @@ MonoBehaviour:
   m_Text: 'Buy Cube
 
 '
+--- !u!114 &114315819332373012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1303533174231540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51cdd70d39ccf4cca914c6680e4adf34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prototype: {fileID: 114313065718326278, guid: d3f63fa43d3974c69840ae4a563635eb,
+    type: 2}
+  Map: {fileID: 0}
+  Costs:
+  - Resource: {fileID: 114785921659330532}
+    Cost: 50
+  - Resource: {fileID: 114447047552119138}
+    Cost: 10
+  SpawnCoordinate: {x: 3, y: 3}
 --- !u!114 &114359685338330200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -569,9 +647,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074b9231ae78ac8479b6b80c26d3826a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resource:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &114429892568090208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -638,7 +713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quantity: 0
-  InitialQuantity: 20
+  InitialQuantity: 50
   OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -683,7 +758,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114315819332373012}
         m_MethodName: SpawnUnit
         m_Mode: 1
         m_Arguments:
@@ -696,6 +771,22 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114450833138460564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1340516276819138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51cdd70d39ccf4cca914c6680e4adf34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prototype: {fileID: 114070610526778342, guid: b65c90cf442dd461b90ab856292cef02,
+    type: 2}
+  Map: {fileID: 0}
+  Costs: []
+  SpawnCoordinate: {x: 0, y: 0}
 --- !u!114 &114501086074378364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -826,7 +917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quantity: 0
-  InitialQuantity: 500
+  InitialQuantity: 1000
   OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -931,7 +1022,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114450833138460564}
         m_MethodName: SpawnUnit
         m_Mode: 1
         m_Arguments:
@@ -1205,6 +1296,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224441884854845576}
+  - {fileID: 4550626958893556}
+  - {fileID: 4077043367487152}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
