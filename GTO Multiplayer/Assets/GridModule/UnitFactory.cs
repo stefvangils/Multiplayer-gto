@@ -9,11 +9,12 @@ public class UnitFactory : MonoBehaviour
     public Map Map;
     public Text x;
     public Text y;
+   
 
 
     public List<ResourceCost> Costs;
     
-    // Temporary until we figure out a better way to decide where to spawn.
+    
     private Vector2Int SpawnCoordinate;
 
     public void SpawnUnit()
@@ -38,6 +39,10 @@ public class UnitFactory : MonoBehaviour
             }
 
             Unit newUnit = Instantiate(Prototype);
+            
+           newUnit.GetComponentInChildren<Renderer>().material.color = Color.blue;
+            
+            
             Cell cell = Map.GetCell(SpawnCoordinate.x, SpawnCoordinate.y);
         
             newUnit.transform.SetParent(cell.transform, false);

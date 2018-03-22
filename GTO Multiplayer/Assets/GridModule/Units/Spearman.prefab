@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33170600138849634}
   - component: {fileID: 136614318607206846}
   - component: {fileID: 23152899100134782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4944329301601192}
   - component: {fileID: 114313065718326278}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spearman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 33398556227414196}
   - component: {fileID: 136177341112118578}
   - component: {fileID: 23724334666407118}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 33678104750868016}
   - component: {fileID: 135188577201478970}
   - component: {fileID: 23325889634430738}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
